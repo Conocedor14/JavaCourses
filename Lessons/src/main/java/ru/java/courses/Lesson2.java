@@ -12,9 +12,8 @@ class Lesson2 {
      * хвост отбрасываем без откругления
      */
     static int formula(int x) {
-        return 0;
+        return (int) Math.sqrt(13 * x + 13 / x);
     }
-
     /**
      * Нужно привести строку с полным именем к инициалам.
      * Например, "Иванов Петр Александрович" → "И.П.А."
@@ -29,7 +28,8 @@ class Lesson2 {
      * @return возвращаем инициалы в верхнем регистре разделенные точкой, как в примере выше
      */
     static String initials(String fullName) {
-        return null;
+        String[] Array = fullName.split(" ");
+        String initials = Array[0].charAt(0) + "." + Array[1].charAt(0) + "." + Array[2].charAt(0) + ".";
+        return initials.toUpperCase();
     }
-
 }
