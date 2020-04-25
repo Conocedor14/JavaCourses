@@ -1,7 +1,5 @@
 package ru.java.courses;
 
-import java.sql.SQLOutput;
-
 public class Lesson4_FlowControl {
 
     /**
@@ -13,13 +11,24 @@ public class Lesson4_FlowControl {
      * ответом будет "Вишнеый сад".
      * <p>
      * Подсказка: массив может быть пустой
-     *
-     * @param strings массив строк случайной длины
-     *
-     * @return самую длинную строку из полученного массива
+     *  @param strings массив строк случайной длины
+     *@return
      */
     public static String task1(String[] strings) {
-        return null;
+        int l = 0;
+        String solution = "";
+        for (int i = 0; i < strings.length; i++) {
+            if (l <= strings[i].length()) {
+                l = strings[i].length();
+            }
+        }
+        for (int i = 0; i < strings.length; i++) {
+            if (l == strings[i].length()) {
+                solution = strings[i];
+                break;
+            }
+        }
+        return solution;
     }
 
     /**
@@ -42,6 +51,29 @@ public class Lesson4_FlowControl {
      * @return целочисленный результат выполнения операции
      */
     public static int task2(int i, int k, char operation) {
-        return 0;
+        int result = 0;
+        if ((operation == '/' || operation == '%') && k == 0) {result = 0;}
+        else {
+            switch (operation) {
+                case '+':
+                    result = i + k;
+                    break;
+                case '-':
+                    result = i - k;
+                    break;
+                case '*':
+                    result = i * k;
+                    break;
+                case '/':
+                    result = i / k;
+                    break;
+                case '%':
+                    result = i % k;
+                    break;
+                default:
+                    result = 0;
+            }
+        }
+        return result;
     }
 }
