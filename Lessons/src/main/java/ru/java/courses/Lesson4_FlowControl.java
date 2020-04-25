@@ -1,5 +1,7 @@
 package ru.java.courses;
 
+import java.sql.SQLOutput;
+
 public class Lesson4_FlowControl {
 
     /**
@@ -11,8 +13,9 @@ public class Lesson4_FlowControl {
      * ответом будет "Вишнеый сад".
      * <p>
      * Подсказка: массив может быть пустой
-     *  @param strings массив строк случайной длины
-     *@return
+     * @param strings массив строк случайной длины
+     *
+     * @return самую длинную строку из полученного массива
      */
     public static String task1(String[] strings) {
         int l = 0;
