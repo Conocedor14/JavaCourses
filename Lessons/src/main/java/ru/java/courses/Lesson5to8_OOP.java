@@ -1,6 +1,5 @@
 package ru.java.courses;
 
-
 public class Lesson5to8_OOP {
 
 /*
